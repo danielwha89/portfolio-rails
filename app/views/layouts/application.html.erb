@@ -9,8 +9,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="header">
+		<div class="container">
+			<div class="col-md-8">
+				<ul>
+					<li><%= link_to "Welcome", root_path, class: "links" %></li>
+					<li><%= link_to "Portfolio", portfolio_path, class: "links" %></li>
+					<li><%= link_to "Blog", href="http://google.com", class: "links" %></li>
+					<li><%= link_to "About", about_path, class: "links" %></li>
+					<li><%= link_to "Contact", contact_path, class: "links" %></li>
+				</ul>
+			</div>
+			<div class="col-md-3 pull-right">
+				<p class="myname">Daniel Ha</p>
+			</div>
+		</div>
+	</div>
 
 <%= yield %>
 
+	<div class="footer">
+		<div class="container">
+			<div class="pull-right">
+				<div class="logos">	
+					<a href="https://twitter.com/ddub89" class="smedia"><%= image_tag "twitter.png" %></a>
+					<a href="https://linkedin.com/in/danielwha/" class="smedia"><%= image_tag "linkedin.png" %></a>
+					<a href="https://github.com/danielwha89" class="smedia"><%= image_tag "github.png" %></a>
+				</div>
+				<h6>&copy 2015 Daniel Ha</h6>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
